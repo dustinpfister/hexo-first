@@ -2,6 +2,22 @@
 
 My first hexo plugin
 
+This plug in just adds an example hexo tag that is the same as just having a script in the scripts folder of the hexo project that has this in it:
+
+```js
+hexo.extend.tag.register('first_plugin', function(){
+ 
+    return '<p>This is my first hexo plugin.</p>';
+ 
+});
+```
+
+At which point it can be used in a markdown file like this:
+
+```
+{% first_plugin %}
+```
+
 ## Manual install process
 
 Because I will not be publishing this, and many other plugins like this I must follow the manual install process that involves changing the current working dir to the node_modules folder of the hexo project and cloning this in
